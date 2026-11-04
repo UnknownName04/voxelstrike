@@ -1,0 +1,13 @@
+{
+  "name": "voxel-strike",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Voxel Strike - an original browser-based voxel arena FPS starter with Node.js multiplayer.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

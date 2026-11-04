@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#101820">
+  <title>Voxel Strike</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+  </script>
+</head>
+<body>
+  <div id="game"></div>
+  <section id="menu" class="overlay">
+    <div class="menu-card">
+      <div class="eyebrow">VOXEL ARENA NETWORK</div>
+      <h1>VOXEL<span> STRIKE</span></h1>
+      <p class="subtitle">A block-built competitive arena.</p>
+      <label class="field-label" for="playerName">CALLSIGN</label>
+      <input id="playerName" maxlength="16" value="Rookie" autocomplete="off">
+      <button id="playButton" class="primary">JOIN MATCH</button>
+      <div class="menu-foot"><span class="dot"></span> Multiplayer arena · Team clash</div>
+      <p class="small">This prototype uses an arcade-style tag blaster and original voxel maps.</p>
+    </div>
+  </section>
+
+  <div id="hud" class="hidden">
+    <div class="topbar">
+      <div class="brand">VOXEL<span>STRIKE</span></div>
+      <div class="scoreboard"><b class="blue">BLUE <i id="blueScore">0</i></b><span>—</span><b class="orange">ORANGE <i id="orangeScore">0</i></b></div>
+      <div id="connection" class="connection">CONNECTING</div>
+    </div>
+    <div class="crosshair"><i></i><b></b><em></em><strong></strong></div>
+    <div class="bottom-left">
+      <div class="health-wrap"><span>SHIELD</span><b id="health">100</b></div>
+      <div class="health-track"><i id="healthBar"></i></div>
+      <div id="teamLabel">BLUE TEAM</div>
+    </div>
+    <div class="bottom-right">
+      <div class="weapon-name">PULSE / 01</div>
+      <div class="ammo">∞ <small>ENERGY</small></div>
+    </div>
+    <div id="feed" class="feed"></div>
+    <div id="notice" class="notice hidden"></div>
+    <div id="mobileControls" class="mobile-controls">
+      <div id="stick" class="stick"><div id="stickNub"></div></div>
+      <div class="mobile-actions">
+        <button id="jumpBtn">JUMP</button>
+        <button id="fireBtn" class="fire">FIRE</button>
+      </div>
+    </div>
+    <div class="help">WASD MOVE · MOUSE LOOK · CLICK TAG · SPACE JUMP · SHIFT SPRINT · ESC RELEASE</div>
+  </div>
+  <div id="roundOverlay" class="round-overlay hidden"></div>
+  <script src="config.js"></script>
+  <script type="module" src="client.js"></script>
+</body>
+</html>
